@@ -1,0 +1,70 @@
+:root {
+  --bg-main: #f4f7f6; /* Very soft pastel background */
+  --clay-bg: #ffffff;
+  --primary: #ff6b81; /* Candy pink */
+  --primary-hover: #ff4757;
+  --accent: #7bed9f; /* Mint green */
+  --accent-hover: #2ed573;
+  --secondary: #70a1ff; /* Pastel blue */
+  --text-dark: #2f3542;
+  --text-muted: #747d8c;
+  
+  /* Claymorphism shadows */
+  --clay-shadow: 
+    8px 8px 24px rgba(112, 161, 255, 0.15), 
+    inset -4px -8px 12px rgba(0, 0, 0, 0.05),
+    inset 4px 8px 12px rgba(255, 255, 255, 1);
+    
+  --clay-shadow-hover: 
+    12px 12px 32px rgba(112, 161, 255, 0.2), 
+    inset -4px -8px 12px rgba(0, 0, 0, 0.04),
+    inset 4px 8px 12px rgba(255, 255, 255, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(255, 107, 129, 0.1), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(123, 237, 159, 0.1), transparent 25%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Claymorphism Utilities */
+.clay-panel {
+  background: var(--clay-bg);
+  border-radius: 32px; /* High border radius */
+  box-shadow: var(--clay-shadow);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Typographic Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,107 @@
+.registration-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.registration-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.registration-form-card {
+  padding: 2.5rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.payment-placeholder {
+  background: var(--clay-bg);
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.02);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.payment-placeholder h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.payment-placeholder p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.order-summary {
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.order-summary h3 {
+  margin-bottom: 1.5rem;
+}
+
+.summary-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.summary-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.summary-details p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 2px dashed rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.total-row {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .registration-container {
+    grid-template-columns: 1fr;
+  }
+  .order-summary {
+    position: static;
+  }
+}

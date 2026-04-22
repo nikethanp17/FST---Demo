@@ -1,0 +1,157 @@
+.confirmation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  min-height: 70vh;
+}
+
+.success-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 3rem;
+  text-align: center;
+}
+
+.success-icon {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.success-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.success-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.ticket-card {
+  background: var(--clay-bg);
+  box-shadow: var(--clay-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 32px;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.ticket-header {
+  background: rgba(255, 107, 129, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+}
+
+.ticket-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.ticket-badge {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ticket-body {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.ticket-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.text-mono {
+  font-family: monospace;
+  color: var(--accent);
+}
+
+.ticket-barcode {
+  padding: 1rem;
+  background: white;
+  text-align: center;
+}
+
+.barcode-lines {
+  height: 40px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    black,
+    black 2px,
+    transparent 2px,
+    transparent 4px,
+    black 4px,
+    black 5px,
+    transparent 5px,
+    transparent 8px
+  );
+  width: 80%;
+  margin: 0 auto;
+}
+
+.email-notice {
+  background: rgba(123, 237, 159, 0.2);
+  border: 1px solid rgba(123, 237, 159, 0.4);
+  padding: 1.5rem;
+  border-radius: 24px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  box-shadow: var(--clay-shadow);
+}
+
+.email-icon {
+  color: var(--accent-hover);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.email-notice p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .ticket-body {
+    grid-template-columns: 1fr;
+  }
+  .confirmation-actions {
+    flex-direction: column;
+  }
+}
